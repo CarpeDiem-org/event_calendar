@@ -1,14 +1,22 @@
-const http = require('http');
+const express = require('express');
+const expressLayouts = require('express-ejs-layouts');
 
-const hostname = '127.0.0.1';
-const port = 3000;
 
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello World');
-});
+const app = express();
 
-server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
-});
+
+app.use(expressLayouts);
+app.set('view engine', 'ejs');
+
+
+app.use('/', require('./routes/index'));
+app.use('/users', require('./routes/users'));
+
+
+
+
+
+const PORT = process.env.PORT || 4000;
+
+
+app.listen(PORT, console.log(`Server started on port ${PORT}`));
