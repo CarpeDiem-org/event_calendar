@@ -8,6 +8,7 @@ const app = express();
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
 
+app.use(express.urlencoded({extends:false}));
 
 app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
