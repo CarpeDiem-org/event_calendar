@@ -44,34 +44,30 @@ router.post('/register', (req, res) => {
    if (surname.length > 45) errors.push({msg: 'Прізвище не може бути більше 45 символів'});
    if (email.length > 45) errors.push({msg: 'Електронна скринька не може бути більше 45 символів'});
    if (companyPosition.length > 90) errors.push({msg: 'Company position не може бути більше 90 символів'});
-   // db.query(`SELECT * FROM event_calendar.User WHERE email LIKE '${email}';`, function (err, result) {
-   //    if (err) console.log(err.message);
-   //    if (result.length) errors.push({msg: 'Користувач з таким поштовим адресом вже існує'});
-   // });
 
-   setTimeout(function () {
+   db.query(`SELECT * FROM event_calendar.User WHERE email LIKE '${email}';`, function (err, result) {
+      if (err) console.log(err.message);
+      if (result.length) errors.push({msg: 'Користувач з таким поштовим адресом вже існує'});
+      if (errors.length > 0){
+         res.render('register', {
+            errors,
+            name,
+            surname,
+            companyPosition,
+            email,
+            password,
+            password2
+         });
+      }
+      else {
+         const sql=`INSERT INTO event_calendar.User (name, surname, company_position, email, password) VALUES ('${name}', '${surname}', '${companyPosition}', '${email}', '${password}');`;
 
-   }, 1000);
-
-   if (errors.length > 0){
-      res.render('register', {
-         errors,
-         name,
-         surname,
-         companyPosition,
-         email,
-         password,
-         password2
-      });
-   }
-   else {
-      const sql=`INSERT INTO event_calendar.User (name, surname, company_position, email, password) VALUES ('${name}', '${surname}', '${companyPosition}', '${email}', '${password}');`;
-
-      db.query(sql, function(err, results){
-         if (err) console.log(err.message);
-         res.send(results);
-      });
-   }
+         db.query(sql, function(err, results){
+            if (err) console.log(err.message);
+            res.send("OK");
+         });
+      }
+   });
 });
 
 router.post('/login', (req, res) => {
