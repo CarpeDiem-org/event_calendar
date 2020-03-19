@@ -6,11 +6,33 @@
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input
-                            type="name"
+                            type="text"
                             id="name"
                             name="name"
                             class="form-control"
                             placeholder="Enter Name"
+                            value="<%= typeof name != 'undefined' ? name : '' %>"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="surname">Surname</label>
+                    <input
+                            type="text"
+                            id="surname"
+                            name="surname"
+                            class="form-control"
+                            placeholder="Enter Surname"
+                            value="<%= typeof name != 'undefined' ? name : '' %>"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="companyPosition">Company Position</label>
+                    <input
+                            type="text"
+                            id="companyPosition"
+                            name="companyPosition"
+                            class="form-control"
+                            placeholder="Enter Company Position"
                             value="<%= typeof name != 'undefined' ? name : '' %>"
                     />
                 </div>

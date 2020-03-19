@@ -32,8 +32,25 @@ router.get('/login', (req, res)=>res.render('login'));
 router.get('/register', (req, res)=>res.render('register'));
 
 router.post('/register', (req, res) => {
-   console.log(req.body);
-   res.send('post');
+   const name = req.body['name'];
+   const surname = req.body['surname'];
+   const companyPosition = req.body['email'];
+   const email = req.body['email'];
+   const password = req.body['password'];
+   const password2 = req.body['password2'];
+
+   if (password === password2)
+   {
+      const sql=`INSERT INTO event_calendar.User (name, surname, company_position, email, password) VALUES ('${name}', '${surname}', '${companyPosition}', '${email}', '${password}');`;
+
+      db.query(sql, function(err, results){
+         res.send(results);
+      });
+   }
+   else
+   {
+      res.send('Паролі не співпадають.');
+   }
 });
 
 router.post('/login', (req, res) => {
@@ -41,15 +58,13 @@ router.post('/login', (req, res) => {
    const password = req.body['password'];
 
    const sql=`SELECT email, password FROM event_calendar.User WHERE email LIKE '${email}' AND password LIKE '${password}';`;
-   // const sql=`SELECT * FROM event_calendar.User;`;
    db.query(sql, function(err, results){
-      console.log(results);
       if(results.length){
          // req.session.userId = results[0].id;
          // req.session.user = results[0];
          // console.log(results[0].id);
          // res.redirect('/home/dashboard');
-         res.send("OK");
+         res.send("Авторизовано.");
       }
       else{
          res.send('Користувач не знайдений.');
