@@ -32,24 +32,32 @@ router.get('/login', (req, res)=>res.render('login'));
 router.get('/register', (req, res)=>res.render('register'));
 
 router.post('/register', (req, res) => {
-   const name = req.body['name'];
-   const surname = req.body['surname'];
-   const companyPosition = req.body['email'];
-   const email = req.body['email'];
-   const password = req.body['password'];
-   const password2 = req.body['password2'];
+   const {name, surname, companyPosition, email, password, password2} = req.body;
 
-   if (password === password2)
-   {
-      const sql=`INSERT INTO event_calendar.User (name, surname, company_position, email, password) VALUES ('${name}', '${surname}', '${companyPosition}', '${email}', '${password}');`;
+   let errors = [];
+
+   if (!name || !surname || !email || !password || !password2) errors.push({msg: 'Будь ласка, заповніть всі обовязкові поля'});
+   if (password !== password2) errors.push({msg: 'Паролі не співпадають'});
+
+
+   if (errors.length > 0){
+      res.render('register', {
+         errors,
+         name,
+         surname,
+         companyPosition,
+         email,
+         password,
+         password2
+      });
+   }
+   else {
+         const sql=`INSERT INTO event_calendar.User (name, surname, company_position, email, password) VALUES ('${name}', '${surname}', '${companyPosition}', '${email}', '${password}');`;
 
       db.query(sql, function(err, results){
          res.send(results);
       });
-   }
-   else
-   {
-      res.send('Паролі не співпадають.');
+      res.send('pass');
    }
 });
 

@@ -8,8 +8,8 @@ CREATE TABLE `User` (
 	`surname` VARCHAR(45) NOT NULL,
 	`Company_position` VARCHAR(90),
 	`email` VARCHAR(45) NOT NULL UNIQUE,
-	`password` VARCHAR(45) UNIQUE,
-	PRIMARY KEY (`id`)
+	`password` VARCHAR(45),
+	PRIMARY KEY (`id`) 
 );
 
 # RUNNED BEFORE IT IN YAROSLAV'S COMPUTER
