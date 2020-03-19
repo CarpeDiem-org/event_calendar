@@ -9,7 +9,7 @@ CREATE TABLE `User` (
 	`Company_position` VARCHAR(90),
 	`email` VARCHAR(45) NOT NULL UNIQUE,
 	`password` VARCHAR(45),
-	PRIMARY KEY (`id`) 
+	PRIMARY KEY (`id`)
 );
 
 # RUNNED BEFORE IT IN YAROSLAV'S COMPUTER
