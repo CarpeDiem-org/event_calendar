@@ -9,6 +9,7 @@ CREATE TABLE `User` (
 	`Company_position` VARCHAR(90),
 	`email` VARCHAR(45) NOT NULL UNIQUE,
 	`password` VARCHAR(45) NOT NULL,
+	`confirmed` BOOL NOT NULL,
 	PRIMARY KEY (`id`)
 );
 

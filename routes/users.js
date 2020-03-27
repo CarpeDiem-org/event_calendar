@@ -1,7 +1,7 @@
 const express = require('express');
 const mysql = require("mysql2");
 const router = express.Router();
-
+const { exec } = require('child_process');
 
 
 
@@ -60,11 +60,23 @@ router.post('/register', (req, res) => {
          });
       }
       else {
-         const sql=`INSERT INTO event_calendar.User (name, surname, company_position, email, password) VALUES ('${name}', '${surname}', '${companyPosition}', '${email}', '${password}');`;
+         const sql=`INSERT INTO event_calendar.User (name, surname, company_position, email, password, confirmed) VALUES ('${name}', '${surname}', '${companyPosition}', '${email}', '${password}', false);`;
 
          db.query(sql, function(err, results){
             if (err) console.log(err.message);
-            res.send("OK");
+
+
+
+
+            //  Run python module that send letter
+            exec(`python3 mailer/mailer.py "You must confirm" "You must confirm" "${email}" `, (err, stdout, stderr) => {
+               console.log(`stdout: ${stdout}`);
+               console.log(`stderr: ${stderr}`);
+            });
+
+
+
+            res.render("login");
          });
       }
    });
@@ -77,10 +89,6 @@ router.post('/login', (req, res) => {
    const sql=`SELECT email, password FROM event_calendar.User WHERE email LIKE '${email}' AND password LIKE '${password}';`;
    db.query(sql, function(err, results){
       if(results.length){
-         // req.session.userId = results[0].id;
-         // req.session.user = results[0];
-         // console.log(results[0].id);
-         // res.redirect('/home/dashboard');
          res.send("Авторизовано.");
       }
       else{
