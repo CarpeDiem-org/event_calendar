@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cd58c1bc-23bb-402a-9d55-1a1083661448" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../db/dbconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../node_modules/crypto/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../node_modules/crypto/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confmaillib.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../routes/calendar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../views/resetPasswordEmailSetting.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../views/resetPasswordSettingNew.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../db_scripts/Carpe_Diem_Calendar_mysql_create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../db/Carpe_Diem_Calendar_mysql_create.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mailer/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mailer/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mailer/.idea/mailer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mailer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mailer/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mailer/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mailer/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mailer/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/mailerconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mailer/mailer.py" beforeDir="false" afterPath="$PROJECT_DIR$/mailer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/../routes/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../verificationtoken.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../views/login.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/partials/messages.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../views/partials/messages.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../views/welcome.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../views/welcome.ejs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1ZiJkrHHC0hOyqeTVfY4GFTtJiU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.confmaillib">
+    <configuration name="confmaillib" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="mailer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/confmaillib.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mailer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="mailer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mailer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.confmaillib" />
+        <item itemvalue="Python.mailer" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cd58c1bc-23bb-402a-9d55-1a1083661448" name="Default Changelist" comment="" />
+      <created>1585316126576</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585316126576</updated>
+      <workItem from="1585316134192" duration="169000" />
+      <workItem from="1585316492814" duration="1249000" />
+      <workItem from="1585321055725" duration="1032000" />
+      <workItem from="1585342987572" duration="4137000" />
+      <workItem from="1585381067305" duration="656000" />
+      <workItem from="1586049944041" duration="478000" />
+      <workItem from="1587543605489" duration="1170000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="528" y="167" key="FileChooserDialogImpl" timestamp="1585316873697">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="528" y="167" key="FileChooserDialogImpl/0.0.1440.900@0.0.1440.900" timestamp="1585316873697" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1585347746875">
+      <screen x="0" y="23" width="1440" height="800" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1585346090632" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.23.1440.800@0.23.1440.800" timestamp="1585347746875" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1585347746874">
+      <screen x="0" y="23" width="1440" height="800" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1585346090631" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.23.1440.800@0.23.1440.800" timestamp="1585347746874" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1585347746874">
+      <screen x="0" y="23" width="1440" height="800" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1585346090630" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.23.1440.800@0.23.1440.800" timestamp="1585347746874" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1585347746875">
+      <screen x="0" y="23" width="1440" height="800" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1585346090632" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.23.1440.800@0.23.1440.800" timestamp="1585347746875" />
+    <state x="221" y="89" key="SettingsEditor" timestamp="1585316905367">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1585316905367" />
+    <state x="397" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1585316135539">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="397" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1585316135539" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/python_modules$confmaillib.coverage" NAME="confmaillib Coverage Results" MODIFIED="1585346090621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/mailer$mailer.coverage" NAME="mailer Coverage Results" MODIFIED="1585317356248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
