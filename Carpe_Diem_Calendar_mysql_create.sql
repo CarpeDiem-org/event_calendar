@@ -2,21 +2,21 @@ DROP TABLE IF EXISTS User, Event, User_Calend, Institution, Topic;
 CREATE TABLE `User` (
 	`id` int NOT NULL AUTO_INCREMENT,
 	`name` VARCHAR(200) NOT NULL,
-	`surname` VARCHAR(200) NOT NULL,
-	`company_position` VARCHAR(200) NOT NULL UNIQUE,
+	`surname` VARCHAR(200),
+	`company_position` VARCHAR(200) UNIQUE,
 	`e-mail` VARCHAR(200) NOT NULL UNIQUE,
-	`password` VARCHAR(200) UNIQUE,
+	`password` VARCHAR(200) NOT NULL UNIQUE,
 	PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `Event` (
 	`id` int NOT NULL AUTO_INCREMENT,
 	`Topic_id` int NOT NULL,
-	`description` TEXT NOT NULL,
+	`description` TEXT,
 	`date` DATE NOT NULL,
 	`time` TIME NOT NULL,
 	`duration` double NOT NULL,
-	`link` VARCHAR(200) NOT NULL,
+	`link` VARCHAR(200),
 	`location` VARCHAR(200) NOT NULL UNIQUE,
 	PRIMARY KEY (`id`)
 );
@@ -32,7 +32,7 @@ CREATE TABLE `Institution` (
 	`id` int NOT NULL AUTO_INCREMENT,
 	`location` VARCHAR(200) NOT NULL UNIQUE,
 	`department` VARCHAR(200) NOT NULL,
-	`position` VARCHAR(200) NOT NULL UNIQUE,
+	`position` VARCHAR(200) UNIQUE,
 	PRIMARY KEY (`id`)
 );
 
