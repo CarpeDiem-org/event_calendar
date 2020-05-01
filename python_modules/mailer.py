@@ -5,7 +5,7 @@ import sys
 
 class Mailer:
 
-    def __init__(self, config_path='mailer/config.json'):
+    def __init__(self, config_path='python_modules/mailerconfig.json'):
         with open(config_path) as f:
             self._subject = None
             self._message = None

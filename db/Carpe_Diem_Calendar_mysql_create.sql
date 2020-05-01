@@ -44,7 +44,7 @@ CREATE TABLE `Institution` (
 
 CREATE TABLE `Topic` (
 	`id` bigint NOT NULL AUTO_INCREMENT,
-	`name` TEXT NOT NULL UNIQUE,
+	`name` VARCHAR(200) NOT NULL UNIQUE,
 	PRIMARY KEY (`id`)
 );
 

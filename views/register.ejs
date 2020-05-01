@@ -1,28 +1,28 @@
 <div class="row mt-5">
     <div class="col-md-6 m-auto">
         <div class="card card-body">
-            <h1 class="text-center mb-3">Register</h1>
+            <h1 class="text-center mb-3">Реєстрація</h1>
             <%- include('partials/messages.ejs'); -%>
             <form action="/users/register" method="POST">
                 <div class="form-group">
-                    <label for="name">Name</label>
+                    <label for="name">Ім'я</label>
                     <input
                             type="text"
                             id="name"
                             name="name"
                             class="form-control"
-                            placeholder="Enter Name"
+                            placeholder="Введіть ім'я"
                             value="<%= typeof name != 'undefined' ? name : '' %>"
                     />
                 </div>
                 <div class="form-group">
-                    <label for="surname">Surname</label>
+                    <label for="surname">Прізвище</label>
                     <input
                             type="text"
                             id="surname"
                             name="surname"
                             class="form-control"
-                            placeholder="Enter Surname"
+                            placeholder="Введіть прізвище"
                             value="<%= typeof surname != 'undefined' ? surname : '' %>"
                     />
                 </div>
@@ -44,37 +44,37 @@
                             id="email"
                             name="email"
                             class="form-control"
-                            placeholder="Enter Email"
+                            placeholder="Введіть email"
                             value="<%= typeof email != 'undefined' ? email : '' %>"
                     />
                 </div>
                 <div class="form-group">
-                    <label for="password">Password</label>
+                    <label for="password">Пароль</label>
                     <input
                             type="password"
                             id="password"
                             name="password"
                             class="form-control"
-                            placeholder="Create Password"
+                            placeholder="Введіть пароль"
                             value="<%= typeof password != 'undefined' ? password : '' %>"
                     />
                 </div>
                 <div class="form-group">
-                    <label for="password2">Confirm Password</label>
+                    <label for="password2">Підтвердження паролю</label>
                     <input
                             type="password"
                             id="password2"
                             name="password2"
                             class="form-control"
-                            placeholder="Confirm Password"
+                            placeholder="Введіть пароль"
                             value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
                     />
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">
-                    Register
+                    Зареєструватися
                 </button>
             </form>
-            <p class="lead mt-4">Have An Account? <a href="/users/login">Login</a></p>
+            <p class="lead mt-4">Вже є акаутн? <a href="/users/login">Login</a></p>
         </div>
     </div>
 </div>

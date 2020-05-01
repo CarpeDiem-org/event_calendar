@@ -1,6 +1,11 @@
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const app = express();
+app.use(express.static( "public" ));
+
+
+
+
 
 
 app.use(expressLayouts);
@@ -10,7 +15,7 @@ app.use(express.urlencoded({extends:false}));
 
 app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
-
+app.use('/home', require('./routes/calendar'));
 
 
 
