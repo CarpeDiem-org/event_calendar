@@ -1,0 +1,80 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body">
+            <h1 class="text-center mb-3">Реєстрація</h1>
+            <%- include('partials/messages.ejs'); -%>
+            <form action="/users/register" method="POST">
+                <div class="form-group">
+                    <label for="name">Ім'я</label>
+                    <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            class="form-control"
+                            placeholder="Введіть ім'я"
+                            value="<%= typeof name != 'undefined' ? name : '' %>"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="surname">Прізвище</label>
+                    <input
+                            type="text"
+                            id="surname"
+                            name="surname"
+                            class="form-control"
+                            placeholder="Введіть прізвище"
+                            value="<%= typeof surname != 'undefined' ? surname : '' %>"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="companyPosition">Company Position</label>
+                    <input
+                            type="text"
+                            id="companyPosition"
+                            name="companyPosition"
+                            class="form-control"
+                            placeholder="Enter Company Position"
+                            value="<%= typeof companyPosition != 'undefined' ? companyPosition : '' %>"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            class="form-control"
+                            placeholder="Введіть email"
+                            value="<%= typeof email != 'undefined' ? email : '' %>"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="password">Пароль</label>
+                    <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            class="form-control"
+                            placeholder="Введіть пароль"
+                            value="<%= typeof password != 'undefined' ? password : '' %>"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="password2">Підтвердження паролю</label>
+                    <input
+                            type="password"
+                            id="password2"
+                            name="password2"
+                            class="form-control"
+                            placeholder="Введіть пароль"
+                            value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+                    />
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    Зареєструватися
+                </button>
+            </form>
+            <p class="lead mt-4">Вже є акаутн? <a href="/users/login">Login</a></p>
+        </div>
+    </div>
+</div>

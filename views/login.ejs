@@ -1,0 +1,36 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body">
+            <h1 class="text-center mb-3">Вхід у систему</h1>
+            <form action="/users/login" method="POST">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            class="form-control"
+                            placeholder="Введіть email"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="password">Пароль</label>
+                    <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            class="form-control"
+                            placeholder="Введіть пароль"
+                    />
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Увійти</button>
+            </form>
+            <p class="lead mt-4">
+                Немає акаунту? <a href="/users/register">Реєстрація</a>
+            </p>
+            <p class="lead mt-4">
+                <a href="/users/reset/email">Відновити пароль</a>
+            </p>
+        </div>
+    </div>
+</div>
