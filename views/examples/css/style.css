@@ -10,7 +10,18 @@ body {
 
 .navbar-dark {
   background-color: #01104A;
-  min-height: 50px;
+  min-height: 50px;   
+}
+
+.form-control:valid {
+    background-color:  #01104A!important;
+    color: rgba(255,255,255,.5);
+    border: none;
+}
+
+option{
+    background-color: #01104A;
+    color: #fff;
 }
 
 .navbar-dark #title {

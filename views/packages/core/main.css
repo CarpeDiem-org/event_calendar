@@ -815,7 +815,6 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
   justify-content: space-between;
   align-items: center;
 }
-
 .fc-toolbar.fc-header-toolbar {
   margin-bottom: 1.5em;
 }
@@ -832,6 +831,43 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
 .fc-toolbar h2 {
   font-size: 1.75em;
   margin: 0;
+}
+@media screen and (max-width: 400px){
+  .fc-toolbar{
+    width: 100%;
+    display: grid;
+  }
+  .left{
+    width: 100%;
+  }
+  .navbar{
+    width: 100%;
+  }
+  .fc-left{
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+  }
+  .fc-center{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+  }
+  .fc-right{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 500px){
+  .fc-toolbar{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-row-gap: 20px;
+  }
+
 }
 
 /* View Structure

@@ -4,14 +4,17 @@
         <meta charset='utf-8' />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet'>
         <link href='../packages/core/main.css' rel='stylesheet' />
         <link href='../packages/bootstrap/main.css' rel='stylesheet' />
         <link href='../packages/timegrid/main.css' rel='stylesheet' />
         <link href='../packages/daygrid/main.css' rel='stylesheet' />
         <link href='../packages/list/main.css' rel='stylesheet' />
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <link rel="stylesheet" href="boot-module/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="boot-module/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="boot-module/bootstrap-social/bootstrap-social.css">
 
         <script src='../packages/core/main.js'></script>
         <script src='../packages/interaction/main.js'></script>
@@ -71,7 +74,17 @@
                     <li class="nav-item active"><a  class="nav-link" href="#"><span class="fa fa-calendar-alt fa-lg"></span> Головна</a></li>
                     <li class="nav-item"><a class="nav-link" id="addevent"><span class="fa fa-calendar-plus fa-lg"></span> Додати подію</a></li>
                     <li class="nav-item"><a  class="nav-link"><span class="fa fa-list-alt fa-lg"></span> Переглянути запрошення</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span  class="fa fa-list fa-lg"></span> Menu</a></li>
+                    <li class="nav-item selector" data-theme-system="bootstrap">
+                        <select class="form-control form-color">
+                            <option value='' selected>Вибір теми</option>
+                            <option value='darkly'>Darkly</option>
+                            <option value='flatly'>Flatly</option>
+                            <option value='sketchy'>Sketchy</option>
+                            <option value='superhero'>Superhero</option>
+                            <option value='united'>United</option>
+                            <option value='yeti'>Yeti</option>
+                        </select>
+                    </li>
                 </ul>
                 <span class="navbar-text">
                     <a data-toggle="modal" data-target="#loginModel">
@@ -134,34 +147,7 @@
               <!--<option value='standard'>Без теми</option>-->
             </select>
           </div>
-        <div data-theme-system="bootstrap" class='selector' style='display:none'>
-          Назва теми:
-  
-          <select>
-            <option value='' selected>Default</option>
-            <!--<option value='cerulean'>Cerulean</option>
-            <option value='cosmo'>Cosmo</option>
-            <option value='cyborg'>Cyborg</option>-->
-            <option value='darkly'>Darkly</option>
-            <option value='flatly'>Flatly</option>
-            <!--<option value='journal'>Journal</option>
-            <option value='litera'>Litera</option>
-            <option value='lumen'>Lumen</option>
-            <option value='lux'>Lux</option>
-            <option value='materia'>Materia</option>
-            <option value='minty'>Minty</option>
-            <option value='pulse'>Pulse</option>
-            <option value='sandstone'>Sandstone</option>
-            <option value='simplex'>Simplex</option>-->
-            <option value='sketchy'>Sketchy</option>
-            <!--<option value='slate'>Slate</option>
-            <option value='solar'>Solar</option>
-            <option value='spacelab'>Spacelab</option>-->
-            <option value='superhero'>Superhero</option>
-            <option value='united'>United</option>
-            <option value='yeti'>Yeti</option>
-          </select>
-        </div>
+    
   
         <span id='loading' style='display:none'>Завантаження...</span>
   
@@ -170,7 +156,7 @@
       <!--<div class='clear'></div>-->
     </div>
     <!--Власне весь календар який я хз звідки грузиться-->
-    <div id='calendar'></div>
+    <div id='calendar' data-theme-system="bootstrap"></div>
 
     <!--Підключення jquery popper bootstrap.js-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
