@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset='utf-8' />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet'>
+        <link href='../packages/core/main.css' rel='stylesheet' />
+        <link href='../packages/bootstrap/main.css' rel='stylesheet' />
+        <link href='../packages/timegrid/main.css' rel='stylesheet' />
+        <link href='../packages/daygrid/main.css' rel='stylesheet' />
+        <link href='../packages/list/main.css' rel='stylesheet' />
+
+        <link rel="stylesheet" href="boot-module/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="boot-module/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="boot-module/bootstrap-social/bootstrap-social.css">
+
+        <script src='../packages/core/main.js'></script>
+        <script src='../packages/interaction/main.js'></script>
+        <script src='../packages/bootstrap/main.js'></script>
+        <script src='../packages/daygrid/main.js'></script>
+        <script src='../packages/timegrid/main.js'></script>
+        <script src='../packages/list/main.js'></script>
+        <script src='js/theme-chooser.js'></script>
+        <script>
+
+          document.addEventListener('DOMContentLoaded', function() {
+            var initialLocaleCode = 'uk';
+            var localeSelectorEl = document.getElementById('locale-selector');
+            var calendarEl = document.getElementById('calendar');
+            var calendar;
+
+            initThemeChooser({
+
+              init: function(themeSystem) {
+                calendar = new FullCalendar.Calendar(calendarEl, {
+                  plugins: [ 'bootstrap', 'interaction', 'dayGrid', 'timeGrid', 'list' ],
+                  themeSystem: themeSystem,
+                  header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+                  },
+                  locale: "uk",
+                  defaultDate: '2020-02-12',
+                  weekNumbers: true,
+                  navLinks: true, // can click day/week names to navigate views
+                  editable: true,
+                  eventLimit: true, // allow "more" link when too many events
+                  events: [            
+                  ]
+                });
+                calendar.render();
+              },
+
+              change: function(themeSystem) {
+                calendar.setOption('themeSystem', themeSystem);
+              }
+            });
+          });
+        </script> 
+    </head>
+    <!-- Навбар -->
+    <nav class="navbar navbar-dark navbar-expand-sm">
+      <div class="navbar-collapse">
+          <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <a class="navbar-brand mr-auto" href="#"><img src="http://ai.lviv.ua/wp-content/uploads/2017/04/AI-11.png"></a>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a  class="nav-link" href="#"><span class="fa fa-calendar-alt fa-lg"></span> Головна</a></li>
+                    <li class="nav-item"><a class="nav-link" id="addevent"><span class="fa fa-calendar-plus fa-lg"></span> Додати подію</a></li>
+                    <li class="nav-item"><a  class="nav-link"><span class="fa fa-list-alt fa-lg"></span> Переглянути запрошення</a></li>
+                    <li class="nav-item selector" data-theme-system="bootstrap">
+                        <select class="form-control form-color">
+                            <option value='' selected>Вибір теми</option>
+                            <option value='darkly'>Darkly</option>
+                            <option value='flatly'>Flatly</option>
+                            <option value='sketchy'>Sketchy</option>
+                            <option value='superhero'>Superhero</option>
+                            <option value='united'>United</option>
+                            <option value='yeti'>Yeti</option>
+                        </select>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+                    <a data-toggle="modal" data-target="#loginModel">
+                        <span class="fa fa-sign-in"></span> Login
+                    </a>
+                </span>
+            </div>
+          </div>  
+      </div>           
+    </nav>
+    <!--Форма для створення події-->
+    <div id="Eventmodal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-md" role="content">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h4 class="modal-title">Create Event</h4>
+                  <button type="button" class="close" data-dismiss="modal">
+                      &times;
+                  </button> 
+              </div>
+              <div class="modal-body">
+                  <form>
+                      <div class="form-group">
+                          <label for="recipient-name" class="col-form-label">Event Title:</label>
+                          <input type="text" class="form-control" id="recipient-name">
+                      </div>
+                      <div class="form-group">
+                          <label for="Date_Time" class="col-form-label">Date and Time:</label>
+                          <div class="form-group row">
+                              <input type="date" class="form-control col-md-4 offset-sm-1" id="date-event">
+                              <input type="time" class="form-control col-md-4 offset-sm-1" id="time-event">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="location" class="col-form-label">Location:</label>
+                          <input type="location" class="form-control" id="location">
+                      </div>
+                      <div class="form-group">
+                          <label for="message-text" class="col-form-label">Event Description:</label>
+                          <textarea class="form-control" id="message-text" rows="4"></textarea>
+                      </div>
+                  </form>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-dark">Invite Someone</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+          </div>
+      </div>
+    </div>
+    <body>
+    <div class="container" id='top'>
+      <div class='left'>
+          <!--Блок для вибору теми-->
+          <div id='theme-system-selector' class='selector'>
+            Налаштування теми:
+            <select>
+              <option value='bootstrap' selected>Bootstrap 4</option>
+              <!--<option value='standard'>Без теми</option>-->
+            </select>
+          </div>
+    
+  
+        <span id='loading' style='display:none'>Завантаження...</span>
+  
+      </div>
+  
+      <!--<div class='clear'></div>-->
+    </div>
+    <!--Власне весь календар який я хз звідки грузиться-->
+    <div id='calendar' data-theme-system="bootstrap"></div>
+
+    <!--Підключення jquery popper bootstrap.js-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!--Скрипт для відкривання форми при натиск на id кнопки-->
+    <script>
+      $(function(){
+        $('#addevent').click(function(){
+          $('#Eventmodal').modal('show');
+        });
+      });
+    </script>
+    </body>
+</html>

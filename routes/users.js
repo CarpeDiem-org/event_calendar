@@ -89,7 +89,8 @@ router.post('/login', (req, res) => {
    const sql=`SELECT email, password FROM event_calendar.User WHERE email LIKE '${email}' AND password LIKE '${password}';`;
    db.query(sql, function(err, results){
       if(results.length){
-         res.send("Авторизовано.");
+         var opn = require('opn');
+         opn('http://localhost:63342/event_calendar/views/views/examples/theming.html?_ijt=1o53imao09p71p205nh4tsf5ff');
       }
       else{
          res.send('Користувач не знайдений.');

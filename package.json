@@ -21,6 +21,7 @@
     "express-layouts": "^1.0.0",
     "express-session": "^1.17.0",
     "mysql2": "^2.1.0",
+    "opn": "^6.0.0",
     "passport": "^0.4.1",
     "react-event-calendar": "^0.3.0"
   },
